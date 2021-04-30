@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hotel_booking/Pages/Details.dart';
 import 'package:hotel_booking/global.dart';
+import 'package:hotel_booking/Widgets/appBar.dart';
+
 
 class HomePage extends StatelessWidget {
   @override
@@ -9,33 +11,16 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.pink.shade50,
-      appBar: _buildAppBar(context),
+      appBar: AppBar(),
+      drawer: Drawer(),
       body: _buildBody(context),
+
 
     );
   }
 }
 
-_buildAppBar(BuildContext context) {
-  return AppBar(
-
-    iconTheme: IconThemeData(color: Colors.blueGrey),
-    title: Row(
-      children: [
-        IconButton(
-            icon: Icon(Icons.menu, color: Colors.black54,), onPressed: () {}),
-
-      ],
-    ),
-    centerTitle: true,
-    titleSpacing: 0.0,
-    elevation: 0.5,
-    backgroundColor: Colors.white30,
-
-  );
-}
-
-  _buildBody(BuildContext context) {
+_buildBody(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 24.0),
       child: Column(

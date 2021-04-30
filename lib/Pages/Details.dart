@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hotel_booking/global.dart';
 import 'package:hotel_booking/Pages/Home.dart';
+import 'package:hotel_booking/Widgets/appBar.dart';
+
 
 
 class DetailsPage extends StatelessWidget {
@@ -10,6 +12,7 @@ class DetailsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.pink.shade50,
+      appBar: AppBar(),
       body: SafeArea(
         child: Row(
           children: [
