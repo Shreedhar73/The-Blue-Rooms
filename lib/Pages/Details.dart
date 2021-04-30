@@ -30,16 +30,69 @@ class DetailsPage extends StatelessWidget {
 
                         Positioned(
                           
-                          left: 6,
-                          right: 6,
+
+                          left: 5,
+                          right: 5,
                           child: IconButton(
                             icon: Icon(Icons.chevron_left_outlined,
-                            color: Colors.white,),
+                            color: Colors.white,
+                            size: 30,),
                             onPressed: () => Navigator.pop(context),
                           ),
-                          
-                          
+                        ),
+
+                        Positioned(
+
+                          left: 0,
+                          right: 0,
+                          bottom: 0,
+                          height: 90,
+                          child: Container(
+                            decoration: BoxDecoration(
+                              gradient: LinearGradient(
+                                colors: [
+                                  Colors.transparent,
+                                  Colors.blue.shade200,
+                                ],
+                                begin: Alignment.topCenter,
+                                end: Alignment.bottomCenter
+                              )
+                            ),
+                          ),
+
+
+                        ),
+
+                        Expanded(
+                            child: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(hotelsList[id].hotelName,
+                                  style: Theme.of(context).textTheme.display1.apply(
+                                    color: Colors.blueGrey,
+                                  ),
+                                  ),
+                                  Text(hotelsList[id].cityName,
+                                  style: Theme.of(context).textTheme.display1.apply(
+                                    color: Colors.blueGrey
+                                  ),),
+
+                                  Spacer(),
+
+                                  Text("Price:" + hotelsList[id].price,
+                                    style: Theme.of(context).textTheme.display1.apply(
+                                      color: Colors.black,
+
+                                    ),
+                                  ),
+
+                                ],
+                              ),
+                            )
                         )
+
                       ],
                     ))
                   ],

@@ -57,6 +57,7 @@ _buildAppBar(BuildContext context) {
 
             SizedBox(height: 20,),
 
+
             Material(
               elevation: 10.0,
               borderRadius: BorderRadius.circular(30.0),
@@ -77,9 +78,21 @@ _buildAppBar(BuildContext context) {
 
               ),
             ),
-            SizedBox(height: 30,),
+            SizedBox(height: 50,),
+
+            Text("Quick Links",
+            style: TextStyle(
+              color: Colors.blueGrey,
+              fontSize: 25,
+            ),),
+
+            SizedBox(height: 30.0),
+
+
+
+
             Container(
-              height: MediaQuery.of(context).size.height * 0.6,
+              height: MediaQuery.of(context).size.height * 0.55,
               child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: hotelsList.length,
@@ -93,6 +106,11 @@ _buildAppBar(BuildContext context) {
                       child: Card(
                         color: Colors.white70,
                         elevation: 20.0,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(3.0),
+                        ) ,
+                        borderOnForeground: true,
+
 
                         child: Container(
                           width: MediaQuery.of(context).size.width * 0.7,
